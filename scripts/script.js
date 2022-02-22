@@ -1,5 +1,7 @@
 const canvas = document.querySelector('#game');
 const ctx = canvas.getContext('2d');
+const buttonLight = document.querySelector('.button_light');
+const buttonDark = document.querySelector('.button_dark');
 
 const ground = new Image();
 ground.src = './images/ground.png';
@@ -91,3 +93,15 @@ function drawGame() {
 }
 
 let game = setInterval(drawGame, 100);
+
+function changeBackgroundColorToWhite() {
+  document.body.style.backgroundColor = 'white';
+}
+
+buttonLight.addEventListener('click', changeBackgroundColorToWhite);
+
+function changeBackgroundColorToBlack() {
+  document.body.style.backgroundColor = 'black';
+}
+
+buttonDark.addEventListener('click', changeBackgroundColorToBlack);
