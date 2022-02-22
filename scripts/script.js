@@ -2,6 +2,7 @@ const canvas = document.querySelector('#game');
 const ctx = canvas.getContext('2d');
 const buttonLight = document.querySelector('.button_light');
 const buttonDark = document.querySelector('.button_dark');
+const buttonReset = document.querySelector('.button_reset');
 
 const ground = new Image();
 ground.src = './images/ground.png';
@@ -92,7 +93,7 @@ function drawGame() {
     snake.unshift(newHead);
 }
 
-let game = setInterval(drawGame, 100);
+let game = setInterval(drawGame, 200);
 
 function changeBackgroundColorToWhite() {
   document.body.style.backgroundColor = 'white';
@@ -105,3 +106,9 @@ function changeBackgroundColorToBlack() {
 }
 
 buttonDark.addEventListener('click', changeBackgroundColorToBlack);
+
+function resetTitle() {
+  location = location
+}
+
+buttonReset.addEventListener('click', resetTitle);
