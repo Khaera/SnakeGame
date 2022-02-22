@@ -40,7 +40,7 @@ function direction(event) {
 function eatTail(head, array) {
   for(let i = 0; i < array.length; i++) {
     if(head.x == array[i].x && head.y == array[i].y)
-    clearInterval(game), alert('Вы съели сами себя. Набрано ' + score + ' очков.');
+    clearInterval(game), alert('Вы съели сами себя, игра окончена. Набрано ' + score + ' очков.');
   }
 }
 
